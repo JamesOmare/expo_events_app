@@ -1,20 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from'react';
+import {NavigationContainer} from '@react-navigation/native'
+import { StyleSheet, Text, SafeAreaView, View, Platform, TextInput, ScrollView, Button, TouchableOpacity } from 'react-native';
+import { HomeStack } from './navigation/stack'
+import 'react-native-gesture-handler';
+import { MyDrawer } from './navigation/drawer';
 
 export default function App() {
+  const [text, setText] = useState('');
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+   <NavigationContainer>
+    {/* <HomeStack /> */}
+    <MyDrawer/>
+    <StatusBar style='light'/>
+  </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const styles = StyleSheet.create({});
