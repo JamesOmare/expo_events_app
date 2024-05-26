@@ -1,9 +1,15 @@
 import { Text, View, StyleSheet } from "react-native"
+import { CameraView, useCameraPermissions } from 'expo-camera';
 
 const QrCodeScreen = () => {
   return (
     <View style={styles.screen}>
       <Text>QrCodeScreen</Text>
+      <CameraView
+        barcodeScannerSettings={{
+            barcodeTypes: ["qr"],
+        }}
+    />
     </View>
   )
 }
