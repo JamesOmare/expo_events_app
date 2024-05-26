@@ -6,7 +6,7 @@ const ProfilesScreen = () => {
   return (
         <View>
             <Text>Profile Screen</Text>
-            <Button title="some profile" onPress={() => navigation.navigate('Profiles', {profileId: 1})}/>
+            <Button title="some profile" onPress={() => navigation.navigate('Profile', {profileId: 1})}/>
         </View>
   )
 }
